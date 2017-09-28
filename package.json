@@ -1,6 +1,6 @@
 {
   "name": "bitcore-lib-mue",
-  "version": "0.13.20",
+  "version": "0.1.0",
   "description": "A pure and powerful JavaScript MUE library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
@@ -108,7 +108,7 @@
     "x11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "bitcore-build-dash": "muecoin/bitcore-build-mue",
+    "bitcore-build-mue": "latest",
     "browserify": "latest",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
