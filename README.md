@@ -1,7 +1,6 @@
 Bitcore-MUE Library
 =======
-
-[![NPM Package](https://img.shields.io/npm/v/bitcore-lib-dash.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-lib-mue)
+[![NPM](https://nodei.co/npm/bitcore-lib-mue.png?mini=true)](https://npmjs.org/package/bitcore-lib-mue)
 [![Build Status](https://travis-ci.org/muecoin/bitcore-lib-mue.svg?branch=master)](https://travis-ci.org/muecoin/bitcore-lib-mue)
 [![Coverage Status](https://coveralls.io/repos/github/muecoin/bitcore-lib-mue/badge.svg)](https://coveralls.io/github/muecoin/bitcore-lib-mue)
 
