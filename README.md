@@ -1,4 +1,4 @@
-Bitcore-Dash Library
+Bitcore-MUE Library
 =======
 
 [![NPM Package](https://img.shields.io/npm/v/bitcore-lib-dash.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-lib-mue)

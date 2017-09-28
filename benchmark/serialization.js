@@ -6,7 +6,7 @@ var bitcoinjs = require('bitcoinjs-lib');
 var bcoin = require('bcoin');
 var async = require('async');
 var fullnode = require('fullnode');
-var blockData = require('./block-357238.json');
+var blockData = require('./block-135935.json');
 
 var maxTime = 20;
 
