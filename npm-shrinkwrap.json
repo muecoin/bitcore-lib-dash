@@ -1,5 +1,5 @@
 {
-  "name": "bitcore-lib-dash",
+  "name": "bitcore-lib-mue",
   "version": "0.13.20",
   "dependencies": {
     "bn.js": {

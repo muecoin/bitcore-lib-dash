@@ -1,24 +1,24 @@
 Bitcore-Dash Library
 =======
 
-[![NPM Package](https://img.shields.io/npm/v/bitcore-lib-dash.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-lib-dash)
-[![Build Status](https://img.shields.io/travis/dashpay/bitcore-lib-dash.svg?branch=master&style=flat-square)](https://travis-ci.org/dashpay/bitcore-lib-dash)
-[![Coverage Status](https://img.shields.io/coveralls/dashpay/bitcore-lib-dash.svg?style=flat-square)](https://coveralls.io/github/dashpay/bitcore-lib-dash?branch=master)
+[![NPM Package](https://img.shields.io/npm/v/bitcore-lib-dash.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-lib-mue)
+[![Build Status](https://travis-ci.org/muecoin/bitcore-lib-mue.svg?branch=master)](https://travis-ci.org/muecoin/bitcore-lib-mue)
+[![Coverage Status](https://coveralls.io/repos/github/muecoin/bitcore-lib-mue/badge.svg)](https://coveralls.io/github/muecoin/bitcore-lib-mue)
 
-A pure and powerful JavaScript Dash library.
+A pure and powerful JavaScript MUE library.
 
 ## Principles
 
-Dash is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Dash network allows for highly resilient dash infrastructure, and the developer community needs reliable, open-source tools to implement dash apps and services.
+MUE is a powerful new peer-to-peer platform that adopted DASH model of the next generation of financial technology. The decentralized nature of the MUE network allows for highly resilient MUE infrastructure, and the developer community needs reliable, open-source tools to implement MUE apps and services.
 
 ## Get Started
 
 ```
-npm install bitcore-lib-dash
+npm install bitcore-lib-mue
 ```
 
 ```
-bower install bitcore-lib-dash
+bower install bitcore-lib-mue
 ```
 
 ## Documentation
@@ -51,19 +51,19 @@ If you find a security issue, please email security@bitpay.com.
 
 ## Contributing
 
-Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/dashpay/bitcore-lib-dash/blob/master/CONTRIBUTING.md) file.
+Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/muecoin/bitcore-lib-mue/blob/master/CONTRIBUTING.md) file.
 
 ## Building the Browser Bundle
 
-To build a bitcore-lib-dash full bundle for the browser:
+To build a bitcore-lib-mue full bundle for the browser:
 
 ```sh
 gulp browser
 ```
 
-This will generate files named `bitcore-lib-dash.js` and `bitcore-lib-dash.min.js`.
+This will generate files named `bitcore-lib-mue.js` and `bitcore-lib-mue.min.js`.
 
-You can also use our pre-generated files, provided for each release along with a PGP signature by one of the project's maintainers. To get them, checkout a release commit (for example, https://github.com/dashpay/bitcore-lib-dash/commit/e33b6e3ba6a1e5830a079e02d949fce69ea33546 for v0.12.6).
+You can also use our pre-generated files, provided for each release along with a PGP signature by one of the project's maintainers. To get them, checkout a release commit (for example, https://github.com/muecoin/bitcore-lib-mue/commit/e33b6e3ba6a1e5830a079e02d949fce69ea33546 for v0.12.6).
 
 To verify signatures, use the following PGP keys:
 - @braydonf: https://pgp.mit.edu/pks/lookup?op=get&search=0x9BBF07CAC07A276D `D909 EFE6 70B5 F6CC 89A3 607A 9BBF 07CA C07A 276D`
@@ -75,8 +75,8 @@ To verify signatures, use the following PGP keys:
 ## Development & Tests
 
 ```sh
-git clone https://github.com/dashpay/bitcore-lib-dash
-cd bitcore-lib-dash
+git clone https://github.com/muecoin/bitcore-lib-mue
+cd bitcore-lib-mue
 npm install
 ```
 
@@ -91,7 +91,8 @@ or create a test coverage report (you can open `coverage/lcov-report/index.html`
 
 ## License
 
-Code released under [the MIT license](https://github.com/dashpay/bitcore-lib-dash/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/muecoin/bitcore-lib-mue/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.
 Copyright 2016 The Dash Foundation, Inc.
+Copyright 2017 The MonetaryUnit Foundation, Inc.

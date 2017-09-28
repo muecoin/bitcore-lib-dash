@@ -1,7 +1,7 @@
 {
   "name": "bitcore-lib-mue",
   "version": "0.13.20",
-  "description": "A pure and powerful JavaScript Dash library.",
+  "description": "A pure and powerful JavaScript MUE library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
@@ -66,6 +66,10 @@
     {
       "name": "Alex Werner",
       "email": "alex@werner.fr"
+    },
+    {
+      "name": "AL Z",
+      "email": "awz@empirictechs.com"
     }
   ],
   "keywords": [
@@ -82,7 +86,9 @@
     "bip37",
     "bip69",
     "bip70",
-    "multisig"
+    "multisig",
+    "mue",
+    "monetaryunit"
   ],
   "repository": {
     "type": "git",
@@ -102,7 +108,7 @@
     "x11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "bitcore-build-dash": "dashpay/bitcore-build-dash",
+    "bitcore-build-dash": "muecoin/bitcore-build-mue",
     "browserify": "latest",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
