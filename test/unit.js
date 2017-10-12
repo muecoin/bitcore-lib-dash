@@ -11,7 +11,7 @@ describe('Unit', function() {
 
   it('can be created from a number and unit', function() {
     expect(function() {
-      return new Unit(1.2, 'BTC');
+      return new Unit(1.2, 'MUE');
     }).to.not.throw();
   });
 
@@ -23,7 +23,7 @@ describe('Unit', function() {
 
   it('no "new" is required for creating an instance', function() {
     expect(function() {
-      return Unit(1.2, 'BTC');
+      return Unit(1.2, 'MUE');
     }).to.not.throw();
 
     expect(function() {
@@ -31,117 +31,117 @@ describe('Unit', function() {
     }).to.not.throw();
   });
 
-  it('has property accesors "BTC", "mBTC", "uBTC", "bits", and "satoshis"', function() {
-    var unit = new Unit(1.2, 'BTC');
-    unit.BTC.should.equal(1.2);
-    unit.mBTC.should.equal(1200);
-    unit.uBTC.should.equal(1200000);
+  it('has property accesors "MUE", "mMUE", "uMUE", "bits", and "Munits"', function() {
+    var unit = new Unit(1.2, 'MUE');
+    unit.MUE.should.equal(1.2);
+    unit.mMUE.should.equal(1200);
+    unit.uMUE.should.equal(1200000);
     unit.bits.should.equal(1200000);
-    unit.satoshis.should.equal(120000000);
+    unit.Munits.should.equal(120000000);
   });
 
   it('a string amount is allowed', function() {
     var unit;
 
     unit = Unit.fromBTC('1.00001');
-    unit.BTC.should.equal(1.00001);
+    unit.MUE.should.equal(1.00001);
 
     unit = Unit.fromMilis('1.00001');
-    unit.mBTC.should.equal(1.00001);
+    unit.mMUE.should.equal(1.00001);
 
     unit = Unit.fromMillis('1.00001');
-    unit.mBTC.should.equal(1.00001);
+    unit.mMUE.should.equal(1.00001);
 
     unit = Unit.fromBits('100');
     unit.bits.should.equal(100);
 
     unit = Unit.fromSatoshis('8999');
-    unit.satoshis.should.equal(8999);
+    unit.Munits.should.equal(8999);
 
     unit = Unit.fromFiat('43', 350);
-    unit.BTC.should.equal(0.12285714);
+    unit.MUE.should.equal(0.12285714);
   });
 
   it('should have constructor helpers', function() {
     var unit;
 
     unit = Unit.fromBTC(1.00001);
-    unit.BTC.should.equal(1.00001);
+    unit.MUE.should.equal(1.00001);
 
     unit = Unit.fromMilis(1.00001);
-    unit.mBTC.should.equal(1.00001);
+    unit.mMUE.should.equal(1.00001);
 
     unit = Unit.fromBits(100);
     unit.bits.should.equal(100);
 
     unit = Unit.fromSatoshis(8999);
-    unit.satoshis.should.equal(8999);
+    unit.Munits.should.equal(8999);
 
     unit = Unit.fromFiat(43, 350);
-    unit.BTC.should.equal(0.12285714);
+    unit.MUE.should.equal(0.12285714);
   });
 
-  it('converts to satoshis correctly', function() {
+  it('converts to Munits correctly', function() {
     /* jshint maxstatements: 25 */
     var unit;
 
     unit = Unit.fromBTC(1.3);
-    unit.mBTC.should.equal(1300);
+    unit.mMUE.should.equal(1300);
     unit.bits.should.equal(1300000);
-    unit.satoshis.should.equal(130000000);
+    unit.Munits.should.equal(130000000);
 
     unit = Unit.fromMilis(1.3);
-    unit.BTC.should.equal(0.0013);
+    unit.MUE.should.equal(0.0013);
     unit.bits.should.equal(1300);
-    unit.satoshis.should.equal(130000);
+    unit.Munits.should.equal(130000);
 
     unit = Unit.fromBits(1.3);
-    unit.BTC.should.equal(0.0000013);
-    unit.mBTC.should.equal(0.0013);
-    unit.satoshis.should.equal(130);
+    unit.MUE.should.equal(0.0000013);
+    unit.mMUE.should.equal(0.0013);
+    unit.Munits.should.equal(130);
 
     unit = Unit.fromSatoshis(3);
-    unit.BTC.should.equal(0.00000003);
-    unit.mBTC.should.equal(0.00003);
+    unit.MUE.should.equal(0.00000003);
+    unit.mMUE.should.equal(0.00003);
     unit.bits.should.equal(0.03);
   });
 
   it('takes into account floating point problems', function() {
     var unit = Unit.fromBTC(0.00000003);
-    unit.mBTC.should.equal(0.00003);
+    unit.mMUE.should.equal(0.00003);
     unit.bits.should.equal(0.03);
-    unit.satoshis.should.equal(3);
+    unit.Munits.should.equal(3);
   });
 
   it('exposes unit codes', function() {
-    should.exist(Unit.BTC);
-    Unit.BTC.should.equal('BTC');
+    should.exist(Unit.MUE);
+    Unit.MUE.should.equal('MUE');
 
-    should.exist(Unit.mBTC);
-    Unit.mBTC.should.equal('mBTC');
+    should.exist(Unit.mMUE);
+    Unit.mMUE.should.equal('mMUE');
 
     should.exist(Unit.bits);
     Unit.bits.should.equal('bits');
 
-    should.exist(Unit.satoshis);
-    Unit.satoshis.should.equal('satoshis');
+    should.exist(Unit.Munits);
+    Unit.Munits.should.equal('Munits');
   });
 
   it('exposes a method that converts to different units', function() {
-    var unit = new Unit(1.3, 'BTC');
-    unit.to(Unit.BTC).should.equal(unit.BTC);
-    unit.to(Unit.mBTC).should.equal(unit.mBTC);
+    var unit = new Unit(1.3, 'MUE');
+    unit.to(Unit.MUE).should.equal(unit.MUE);
+    unit.to(Unit.mMUE).should.equal(unit.mMUE);
     unit.to(Unit.bits).should.equal(unit.bits);
-    unit.to(Unit.satoshis).should.equal(unit.satoshis);
+    unit.to(Unit.Munits).should.equal(unit.Munits);
   });
 
   it('exposes shorthand conversion methods', function() {
-    var unit = new Unit(1.3, 'BTC');
-    unit.toBTC().should.equal(unit.BTC);
-    unit.toMilis().should.equal(unit.mBTC);
-    unit.toMillis().should.equal(unit.mBTC);
+    var unit = new Unit(1.3, 'MUE');
+    unit.toBTC().should.equal(unit.MUE);
+    unit.toMilis().should.equal(unit.mMUE);
+    unit.toMillis().should.equal(unit.mMUE);
     unit.toBits().should.equal(unit.bits);
-    unit.toSatoshis().should.equal(unit.satoshis);
+    unit.toSatoshis().should.equal(unit.Munits);
   });
 
   it('can convert to fiat', function() {
@@ -154,13 +154,13 @@ describe('Unit', function() {
   });
 
   it('toString works as expected', function() {
-    var unit = new Unit(1.3, 'BTC');
+    var unit = new Unit(1.3, 'MUE');
     should.exist(unit.toString);
     unit.toString().should.be.a('string');
   });
 
   it('can be imported and exported from/to JSON', function() {
-    var json = JSON.stringify({amount:1.3, code:'BTC'});
+    var json = JSON.stringify({amount:1.3, code:'MUE'});
     var unit = Unit.fromObject(JSON.parse(json));
     JSON.stringify(unit).should.deep.equal(json);
   });
@@ -172,8 +172,8 @@ describe('Unit', function() {
   });
 
   it('inspect method displays nicely', function() {
-    var unit = new Unit(1.3, 'BTC');
-    unit.inspect().should.equal('<Unit: 130000000 satoshis>');
+    var unit = new Unit(1.3, 'MUE');
+    unit.inspect().should.equal('<Unit: 130000000 Munits>');
   });
 
   it('fails when the unit is not recognized', function() {
@@ -181,7 +181,7 @@ describe('Unit', function() {
       return new Unit(100, 'USD');
     }).to.throw(errors.Unit.UnknownCode);
     expect(function() {
-      return new Unit(100, 'BTC').to('USD');
+      return new Unit(100, 'MUE').to('USD');
     }).to.throw(errors.Unit.UnknownCode);
   });
 
@@ -190,7 +190,7 @@ describe('Unit', function() {
       return new Unit(100, -123);
     }).to.throw(errors.Unit.InvalidRate);
     expect(function() {
-      return new Unit(100, 'BTC').atRate(-123);
+      return new Unit(100, 'MUE').atRate(-123);
     }).to.throw(errors.Unit.InvalidRate);
   });
 

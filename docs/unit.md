@@ -13,14 +13,14 @@ To understand the need of using the `Unit` class when dealing with unit conversi
 ```
 
 ## Supported units
-The supported units are BTC, mBTC, bits (micro BTCs, uBTC) and satoshis. The codes for each unit can be found as members of the Unit class.
+The supported units are MUE, mMUE, bits (micro MUEs, uMUE) and Munits. The codes for each unit can be found as members of the Unit class.
 
 ```javascript
-var btcCode = Unit.BTC;
-var mbtcCode = Unit.mBTC;
-var ubtcCode = Unit.uBTC;
+var btcCode = Unit.MUE;
+var mbtcCode = Unit.mMUE;
+var ubtcCode = Unit.uMUE;
 var bitsCode = Unit.bits;
-var satsCode = Unit.satoshis;
+var satsCode = Unit.Munits;
 ```
 
 ## Creating units
@@ -31,7 +31,7 @@ var unit;
 var amount = 100;
 
 // using a unit code
-var unitPreference = Unit.BTC;
+var unitPreference = Unit.MUE;
 unit = new Unit(amount, unitPreference);
 
 // using a known unit
@@ -48,7 +48,7 @@ Once you have a unit instance, you can check its representation in all the avail
 var unit;
 
 // using a unit code
-var unitPreference = Unit.BTC;
+var unitPreference = Unit.MUE;
 value = Unit.fromSatoshis(amount).to(unitPreference);
 
 // using a known unit
