@@ -184,8 +184,8 @@ describe('MerkleBlock', function() {
       var hashData = [
         ['9d0a368bc9923c6cb966135a4ceda30cc5f259f72c8843ce015056375f8a06ec', false],
         ['39e5cd533567ac0a8602bcc4c29e2f01a4abb0fe68ffbc7be6c393db188b72e0', false],
-        ['cd75b421157eca03eff664bdc165730f91ef2fa52df19ff415ab5acb30045425', true],
-        ['2ef9795147caaeecee5bc2520704bb372cde06dbd2e871750f31336fd3f02be3', true],
+        ['2f0e0f273ee8be303c5b128f716fef6657c176e2421a71efece310c8ab17e4fc', true],
+        ['d0772192f4e1c3faae6ff058f9209b91d02c6dbc6bdf3e04d4d2fc04e0ef4ff6', true],
         ['2241d3448560f8b1d3a07ea5c31e79eb595632984a20f50944809a61fdd9fe0b', true],
         ['45afbfe270014d5593cb065562f1fed726f767fe334d8b3f4379025cfa5be8c5', true],
         ['198c03da0ccf871db91fe436e2795908eac5cc7d164232182e9445f7f9db1ab2', false],

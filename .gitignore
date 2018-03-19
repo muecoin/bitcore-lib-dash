@@ -22,5 +22,4 @@ bitcore.js.sig
 bitcore.min.js.sig
 tests.js
 .idea/
-.coveralls.yml
 test/SAINT
