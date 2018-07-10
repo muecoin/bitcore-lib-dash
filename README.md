@@ -13,11 +13,11 @@ MUE is a powerful new peer-to-peer platform that adopted DASH model of the next 
 ## Get Started
 
 ```
-npm install bitcore-lib-mue
+npm install @monetaryunit/bitcore-lib-mue
 ```
 
 ```
-bower install bitcore-lib-mue
+bower install @monetaryunit/bitcore-lib-mue
 ```
 
 ## Documentation
