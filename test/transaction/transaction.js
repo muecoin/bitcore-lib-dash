@@ -192,7 +192,7 @@ describe('Transaction', function() {
 
   // TODO: Migrate this into a test for inputs
 
-  var fromAddress = 'yYo3PeSBv2rMnJeyLUCCzx4Y8VhPppZKkC';
+  var fromAddress = 'GQV5YjQB4mWEHqoZwGgS5APqnc9pXaYTz8';
   var simpleUtxoWith100000Satoshis = {
     address: fromAddress,
     txId: 'a477af6b2667c29670467e4e0728b685ee07b240235771862318e29ddbe58458',
@@ -202,7 +202,7 @@ describe('Transaction', function() {
   };
   var anyoneCanSpendUTXO = JSON.parse(JSON.stringify(simpleUtxoWith100000Satoshis));
   anyoneCanSpendUTXO.script = new Script().add('OP_TRUE');
-  var toAddress = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+  var toAddress = 'GWNU4njMk5JsJoEJogXewZpvbuv4fPf7E7';
   var changeAddress = 'yLygrKXHautSYwRAF3TUGJvidxKqXwLA23';
   var changeAddressP2SH = '8tdHAwttdvR87BihpKRSUjN6HyQNVZsqBv';
   var privateKey = 'cSBnVM4xvxarwGQuAfQFwqDg9k5tErHUHzgWsEfD4zdwUasvqRVY';

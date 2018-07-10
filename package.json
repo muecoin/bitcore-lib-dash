@@ -1,16 +1,22 @@
 {
-  "name": "bitcore-lib-mue",
+  "name": "@monetaryunit/bitcore-lib-mue",
   "version": "0.1.1",
   "description": "A pure and powerful JavaScript MUE library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
-    "lint": "gulp lint",
-    "test": "gulp test",
-    "coverage": "gulp coverage",
-    "build": "gulp"
+    "lint": "jsjint . || true ",
+    "test": "npm run build && npm run test:node && npm run test:browser && npm run lint",
+    "test:node": "mocha --no-timeouts --recursive",
+    "test:browser": "karma start ./karma.conf.js --single-run",
+    "coverage": "nyc mocha --recursive",
+    "build": "webpack --display-error-details"
   },
   "contributors": [
+    {
+      "name": "BitPay",
+      "email": "dev@bitpay.com"
+    },
     {
       "name": "Daniel Cousens",
       "email": "bitcoin@dcousens.com"
@@ -68,8 +74,8 @@
       "email": "alex@werner.fr"
     },
     {
-      "name": "AL Z",
-      "email": "awz@empirictechs.com"
+      "name": "BBoBB",
+      "email": "ops@monetaryunit.org"
     }
   ],
   "keywords": [
@@ -98,21 +104,22 @@
     "request": "browser-request"
   },
   "dependencies": {
-    "bn.js": "=2.0.4",
-    "bs58": "=2.0.0",
-    "buffer-compare": "=1.0.0",
-    "elliptic": "=3.0.3",
+    "bn.js": "=4.11.8",
+    "bs58": "=4.0.1",
+    "buffer-compare": "=1.1.1",
+    "elliptic": "=6.4.0",
     "inherits": "=2.0.1",
-    "lodash": "=3.10.1",
+    "lodash": "=4.17.4",
     "sha512": "=0.0.1",
     "x11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "bitcore-build-mue": "latest",
-    "browserify": "latest",
+    "@monetaryunit/bitcore-build-mue": "latest",
     "brfs": "^1.2.0",
+    "browserify": "latest",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
+    "gulp-shell": "^0.6.5",
     "sinon": "^1.13.0"
   },
   "license": "MIT"
