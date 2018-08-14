@@ -1,5 +1,5 @@
 {
-  "name": "@monetaryunit/bitcore-lib-mue",
+  "name": "bitcore-lib-mue",
   "version": "0.1.1",
   "description": "A pure and powerful JavaScript MUE library.",
   "author": "BitPay <dev@bitpay.com>",
