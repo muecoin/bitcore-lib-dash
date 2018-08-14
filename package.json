@@ -114,7 +114,7 @@
     "x11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "@monetaryunit/bitcore-build-mue": "latest",
+    "bitcore-build-mue": "sotblad/bitcore-build-mue",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
