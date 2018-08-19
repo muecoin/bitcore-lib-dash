@@ -112,7 +112,7 @@
     "x11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "bitcore-build-mue": "https://github.com/sotblad/bitcore-build-mue",
+    "bitcore-build-mue": "muecoin/bitcore-build-mue",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
